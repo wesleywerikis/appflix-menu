@@ -164,6 +164,7 @@ public class MenuView {
 		panelMenu_MenuBar_Modules.setLayout(null);
 		
 		JLabel lblMenu_IconUserRegister = new JLabel("");
+		lblMenu_IconUserRegister.setIcon(new ImageIcon(MenuView.class.getResource("/resources/img/menu-bar/user.png")));
 		lblMenu_IconUserRegister.setHorizontalTextPosition(SwingConstants.CENTER);
 		lblMenu_IconUserRegister.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblMenu_IconUserRegister.addMouseListener(new MouseAdapter() {
@@ -177,6 +178,7 @@ public class MenuView {
 		panelMenu_MenuBar_Modules.add(lblMenu_IconUserRegister);
 		
 		JLabel lblMenu_IconCustomerRegister = new JLabel("");
+		lblMenu_IconCustomerRegister.setIcon(new ImageIcon(MenuView.class.getResource("/resources/img/menu-bar/customer.png")));
 		lblMenu_IconCustomerRegister.setHorizontalTextPosition(SwingConstants.CENTER);
 		lblMenu_IconCustomerRegister.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblMenu_IconCustomerRegister.addMouseListener(new MouseAdapter() {
@@ -197,6 +199,7 @@ public class MenuView {
 		panelMenu_MenuBar_Modules.add(lblMenu_IconCustomerRegister);
 		
 		JLabel lblMenu_IconSuppliersRegister = new JLabel("");
+		lblMenu_IconSuppliersRegister.setIcon(new ImageIcon(MenuView.class.getResource("/resources/img/menu-bar/suppliers.png")));
 		lblMenu_IconSuppliersRegister.setHorizontalTextPosition(SwingConstants.CENTER);
 		lblMenu_IconSuppliersRegister.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblMenu_IconSuppliersRegister.addMouseListener(new MouseAdapter() {

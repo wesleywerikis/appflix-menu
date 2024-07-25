@@ -98,15 +98,40 @@ public class MenuView {
 		panelMenu_Full.add(panelMenu_Main);
 		panelMenu_Main.setLayout(null);
 		
+		JLabel lblMenu_IconHome = new JLabel("");
+		lblMenu_IconHome.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblMenu_IconHome.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				closePanel();
+			}
+		});
+		lblMenu_IconHome.setIcon(new ImageIcon(MenuView.class.getResource("/resources/img/menu-bar/home.png")));
+		lblMenu_IconHome.setFont(new Font("Microsoft PhagsPa", Font.PLAIN, 16));
+		lblMenu_IconHome.setBounds(29, 26, 26, 16);
+		panelMenu_Main.add(lblMenu_IconHome);
+		
 		JLabel lblMenu_MenuPrincipal = new JLabel("menu principal");
+		lblMenu_MenuPrincipal.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblMenu_MenuPrincipal.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				closePanel();
+			}
+		});
 		lblMenu_MenuPrincipal.setFont(new Font("Microsoft PhagsPa", Font.PLAIN, 16));
-		lblMenu_MenuPrincipal.setBounds(29, 21, 104, 21);
+		lblMenu_MenuPrincipal.setBounds(55, 26, 104, 16);
 		panelMenu_Main.add(lblMenu_MenuPrincipal);
 		
-		JLabel lblMenu_Separator_Main = new JLabel("");
-		lblMenu_Separator_Main.setBorder(new MatteBorder(1, 0, 0, 0, (Color) new Color(192, 192, 192)));
-		lblMenu_Separator_Main.setBounds(29, 47, 855, 1);
-		panelMenu_Main.add(lblMenu_Separator_Main);
+		JLabel lblMenu_HorizontalSeparator = new JLabel("");
+		lblMenu_HorizontalSeparator.setBorder(new MatteBorder(1, 0, 0, 0, (Color) new Color(192, 192, 192)));
+		lblMenu_HorizontalSeparator.setBounds(29, 47, 855, 1);
+		panelMenu_Main.add(lblMenu_HorizontalSeparator);
+		
+		JLabel lblMenu_VerticalSeparator = new JLabel("");
+		lblMenu_VerticalSeparator.setBorder(new MatteBorder(0, 1, 0, 0, (Color) new Color(192, 192, 192)));
+		lblMenu_VerticalSeparator.setBounds(456, 85, 2, 350);
+		panelMenu_Main.add(lblMenu_VerticalSeparator);
 		
 		JPanel panelMenu_MenuBar = new JPanel();
 		panelMenu_MenuBar.setBounds(29, 53, 425, 407);
@@ -229,6 +254,10 @@ public class MenuView {
 		updateDateLabel();
 	}
 	
+	protected void closePanel() {
+		panelMenu_MenuBar_Modules.setVisible(false);
+	}
+
 	private void updateDateLabel() {
 		String formatteDate = DateUtils.getCurrentDate();
 		lblMenu_Date.setText(formatteDate);
